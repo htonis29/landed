@@ -1,0 +1,412 @@
+* {
+    font-family: "Montserrat";
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+#dummy {
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    /* position: relative; */
+    position: fixed;
+    /* left: 80px; */
+    top: 0;
+}
+
+h1 {
+    font-weight: 800;
+    color: crimson;
+    margin: 0 0 20px 0;
+    font-size: 48px;
+}
+a {
+   text-decoration: none;
+   color: yellowgreen;
+   font-size: 20px;
+}
+
+p {
+    color: brown;
+    margin: 0 0 20px 0;
+    font-size: 28px;
+}
+
+section {
+    padding: 40px 110px;
+}
+
+img, iframe {
+    width: 100%;
+}
+
+#landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 18px;
+}
+/* contoh Descendant Combinator tambahan di CSS nya */
+#landing p{
+    margin-bottom: 40px;
+}
+
+#landing > div {
+    width: 50%;
+}
+
+/* section {
+    background-image: url("https://akcdn.detik.net.id/community/media/visual/2022/03/02/ilustrasi-whatsapp_169.jpeg?w=620");
+
+} */
+
+.btn {
+    background-color: aqua;
+    color: whitesmoke;
+    padding: 6px 20px;
+    border: 3px solid yellow ;
+}
+.btn-alt {
+    background-color: white;
+    color: blue;
+    margin-right: 11px;
+    border: 2px solid yellow ;
+}
+
+/* Contoh Adjescent Sibling Combinator */
+/* .btn + .btn{
+    background-color: coral;
+    color: darkgreen;
+} */ */
+
+/* contoh Child Combinator tambahan di CSS nya untuk setting hanya group a Nav */
+nav > a{
+    color: chartreuse;
+    margin-left: 14px;
+}
+
+nav > a:hover {
+    color: blueviolet;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 16px 110px; */
+    column-gap: 16px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+#header h1 {
+    margin: 0;
+    /* animation: flash 1s infinite; */
+    animation: bounceIn 3s;
+}
+
+@keyframes bounceIn {
+    0% {
+        filter: opacity(0);
+        transform: translateY(-20px);
+    }
+    35% {
+        filter: opacity(0.25);
+        transform: translateY(0);
+    }
+    75% {
+        filter: opacity(0.5);
+        transform: translateY(-10px);
+    }
+    100% {
+        filter: opacity(1);
+        transform: translateY(0);
+    }
+}
+
+@keyframes flash {
+    from {
+        filter: opacity(0);
+    }
+    to {
+        filter: opacity(1);
+    }
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#about > div {
+    width: 50%;
+}
+
+#about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.about-stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-stats-item div {
+    width: 54px;
+    height: 14px;
+    background-color: darkgoldenrod;
+    margin-bottom: 16px;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-header h1 {
+    position: relative;
+}
+
+.service-header h1::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url("./images/accent1.svg");
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    z-index: -1;
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 122px;
+    margin-top: 24px;
+}
+
+.service-detail-item {
+    box-shadow: -4px 4px 4px gray;
+}
+
+.service-detail-item:hover {
+    transform: scale(1.1);
+}
+
+.service-detail-item img:hover {
+    filter: contrast(1);
+}
+.service-detail-item img {
+    width: 100%;
+    /* filter: grayscale(1); */
+    filter: contrast(2);
+    /* filter: blur(3px); */
+}
+
+.service-detail-item h2 {
+    padding: 0 16px;
+}
+.service-detail-item p {
+    font-size: 18px;
+    padding: 0 16px;
+}
+
+#contact h1 {
+    position: relative;
+}
+
+#contact > h1::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: url("./images/accent2.svg"); 
+    left: -20px;
+    top: -10px;
+    z-index: -1;
+}
+.contact-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    column-gap: 120px;
+}
+
+.contact-detail > div, .contact-form-detail > form {
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid yellowgreen;
+    padding: 62px 20px;
+}
+
+form h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+/* dibawah ini Gak jalan gak tahu kenapa padahal udah ngikutin Video */
+form button {
+    border: none;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+.contact-form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    margin-top: 30px;
+    grid-template-areas: "nama masalah"
+                         "email nohp"
+                         "pertanyaan pertanyaan";
+}
+
+#input-nama {
+    grid-area: nama;
+}
+
+#input-masalah {
+    grid-area: masalah;
+}
+
+#input-email {
+    grid-area: email;
+}
+
+#input-nohp {
+    grid-area: nohp;
+}
+
+#input-pertanyaan {
+    grid-area: pertanyaan;
+}
+
+.contact-form-detail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.contact-form-detail label {
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+.contact-form-detail input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    font-size: 24px;
+}
+
+.contact-form-detail input:focus {
+    border-bottom: 2px solid blue; 
+}
+
+footer {
+    padding: 16px 120px;
+    background-color: yellowgreen;
+    color: salmon;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p{
+    color: white;
+    width: 50%;
+}
+
+.socmed-icon{
+    display: flex;
+    gap: 32px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .service-detail {
+        gap: 24px;
+    }
+
+    .contact-detail {
+        gap: 24px;
+    }
+
+    .contact-form-group {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* contoh pemakaian berubah background kalau pixel nya lebih dari 992
+    html, body {
+        background-color: blueviolet;
+    } */
+    
+    #header #footer {
+        padding: 16px 32px;
+    }
+
+    section {
+        padding: 64px 32px;
+    }
+    
+    #landing {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #landing > div {
+        width: 100%;
+    }
+
+    #about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    .service-detail {
+        gap: 16px;
+    }
+
+    .contact-detail {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 64px;
+    }
+
+    .contact-detail form, .contact-detail > div {
+        width: 100%;
+    }
+
+
+
+
+
+}

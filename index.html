@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB Coba CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <h1>
+            Ini WEB Test untuk CSS
+        </h1>
+        <nav>
+            <a href="#about">Satu</a>
+            <a href="#service">Dua</a>
+            <a href="#contact">Tiga</a>
+        </nav>
+    </header>
+    
+    <!-- Dibawah contoh manggil position dari css -->
+    <!-- <div id="dummy"></div> -->
+
+    <!-- class descent contoh CSS Descendant Combinator pada sebagian group tidak semuanya -->
+    <section id="landing">
+        <div>
+            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
+            <p>Lorem ipsum dolor sit.</p>
+            <div>
+                <a class="btn btn-alt" href="#about">Tanya</a>
+                <a class="btn" href="#contact">Lelepon</a>
+            </div>
+        </div>
+        <div>
+            <img src="images/landing.png" alt="landing images">
+        </div>
+    </section>
+    <section id="about">
+        <div>
+            <img src="images/about.png" alt="about images">
+        </div>
+        <div>
+            <h1>Kami adalah yang terbaik pada bidang kami</h1>
+            <p>Coba tanya saja kepada orang2 yang lain</p>
+            <div id="about-stats">
+                <div class="about-stats-item">
+                    <h1>120+</h1>
+                    <div></div>
+                    <p>Jago</p>
+                </div>
+                <div class="about-stats-item">
+                    <h1>330+</h1>
+                    <div></div>
+                    <p>Menengah</p>
+                </div>
+                <div class="about-stats-item">
+                    <h1>450+</h1>
+                    <div></div>
+                    <p>Pinter</p>
+                </div>      
+            </div>
+        </div>
+    </section>
+    <section id="service">
+        <div class="service-header">
+            <div>
+                <h1>Ini daftar orang2nya</h1>
+                <p>Keren2 pokok nya</p>                
+            </div>
+            <a href="#contact" class="btn">Hub Kami</a>
+        </div>
+        <div class="service-detail">
+            <div class="service-detail-item">
+                <img src="images/service1.png" alt="service 1 image">
+                <h2>Web Application</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fugiat veniam accusamus ut quos minus.</p>
+            </div>
+            <div class="service-detail-item">
+                <img src="images/service2.png" alt="service 2 image">
+                <h2>UI/UX</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis natus blanditiis saepe?</p>
+            </div>
+            <div class="service-detail-item">
+                <img src="images/service3.png" alt="service 3 image">
+                <h2>Mobile Apps</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1>HUBungi Kami</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor unde odit expedita totam aut.</p>
+        <div class="contact-detail">
+            <form action="">
+                <h1>Apa yang mau ditanyakan ?</h1>
+                <div class="contact-form-group">
+                    <div id="input-nama" class="contact-form-detail">
+                        <label for="">Nama</label>
+                        <input type="text" placeholder="Namanya">
+                    </div>
+                    <div id="input-masalah" class="contact-form-detail">
+                        <label for="">Masalah</label>
+                        <input type="text" placeholder="Masalahmu">
+                    </div>
+                    <div id="input-email" class="contact-form-detail">
+                        <label for="">Email</label>
+                        <input type="text" placeholder="Email">
+                    </div>
+                    <div id="input-nohp" class="contact-form-detail">
+                        <label for="">No HP</label>
+                        <input type="text" placeholder="No HP">
+                    </div>
+                    <div id="input-pertanyaan" class="contact-form-detail">
+                        <label for="">Pertanyaan</label>
+                        <input type="text" placeholder="pertanyaan">
+                    </div>
+                </div>
+                    <button class="btn">Submit</button>
+            </form>
+        <div>
+                <h1>Tempat saya</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.421875014956!2d106.87916611433171!3d-6.339366963788447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed2475619d7f%3A0x12a4f1d4bd2313fc!2sRumah%20Panorama%20Kontrakan%20dan%20Kos!5e0!3m2!1sen!2sid!4v1675743973877!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div>
+            <h1>COBaks</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+        </div>
+        <div class="socmed-icon">
+            <img src="images/Facebook.svg" alt="">
+            <img src="images/Instagram.svg" alt="">
+            <img src="images/Twitter.svg" alt="">
+        </div>
+
+    </footer>
+</body>
+</html>
